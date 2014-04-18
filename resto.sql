@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Ven 18 Avril 2014 à 11:55
+-- Généré le: Ven 18 Avril 2014 à 12:16
 -- Version du serveur: 5.5.35-0ubuntu0.13.10.2
 -- Version de PHP: 5.5.3-1ubuntu2.3
 
@@ -59,18 +59,18 @@ CREATE TABLE IF NOT EXISTS `carte` (
 --
 
 INSERT INTO `carte` (`id`, `name`, `type`, `price_in`, `price_delivery`, `availability`, `photo`) VALUES
-(1, 'Carrot, Orange and Mango Spheres with Rose Crystals', 'starter', 15, 13, 1, 'http://www.molecularrecipes.com/wp-content/uploads/spherification/xcarrot-orange-mango-spheres.jpg.pagespeed.ic.kV1jJVTODa.jpg'),
-(2, 'Liquid Parmesan Gnocchi and Mushroom Infusion', 'main', 30, 27, 1, 'http://www.molecularrecipes.com/wp-content/uploads/jordi-cruz/xliquid-parmesan-gnocchi-final.jpg.pagespeed.ic.s2YT03uu8K.jpg'),
-(3, 'Strawberry Spheres with Ground Pepper', 'dessert', 14, 13, 1, 'http://www.molecularrecipes.com/wp-content/uploads/spherification/xstrawberry-spheres-2.jpg.pagespeed.ic.FmD3q1uKR8.jpg'),
-(4, 'Apple Caviar with Banana Foam', 'dessert', 12, 10, 1, 'http://www.molecularrecipes.com/wp-content/uploads/spherification/xapple-caviar.jpg.pagespeed.ic.Auvse2vAPV.jpg'),
-(5, 'Yuzu Cilantro Spheres', 'starter', 13, 12, 1, 'http://www.molecularrecipes.com/wp-content/uploads/resized/xyuzu-sphere.jpg.pagespeed.ic.xl1aS07wfr.jpg'),
-(6, 'Honey Caviar, Fourme Ambert, Black Tea', 'starter', 15, 14, 1, 'http://www.molecularrecipes.com/wp-content/uploads/spherification/xhoney-caviar.jpg.pagespeed.ic.I-XFzhWHfr.jpg'),
-(7, 'Carbonated Mojito Spheres', 'drink', 12, 10, 1, 'http://www.molecularrecipes.com/wp-content/uploads/spherification/xcarbonated-mojito-spheres-720-b.jpg.pagespeed.ic.c1KaqKtKxG.jpg'),
-(8, 'Spherical Yogurt', 'dessert', 12, 10, 1, 'http://www.molecularrecipes.com/wp-content/uploads/spherification/xspherical-yogurt-720.png.pagespeed.ic.A0fJdUcWjg.jpg'),
-(9, 'Potato Foam Gnocchi with Roasted Potato Skin Consomme', 'main', 28, 25, 1, 'http://www.molecularrecipes.com/wp-content/uploads/spherification/xpotato-foam-gnocchi_0.jpg.pagespeed.ic.R3XULMz9Rz.jpg'),
-(10, 'Reverse Spherical Mozzarella', 'starter', 14, 12, 1, 'http://www.molecularrecipes.com/wp-content/uploads/spherification/xspherical-mozzarella-720.png.pagespeed.ic.Xy5n06FhkD.jpg'),
-(11, 'Liquid Pea Ravioli', 'main', 26, 24, 1, 'http://www.molecularrecipes.com/wp-content/uploads/spherification/xliquid-pea-ravioli-720.png.pagespeed.ic.n4pJMd3CaW.jpg'),
-(12, 'VOSS Water', 'drink', 10, 9, 1, 'http://www.nkswingle.com/wp-content/uploads/2011/04/%C2%A9kamiswingle_northern-virginia-product-photography-voss-water-1.jpg');
+(1, 'Carrot, Orange and Mango Spheres with Rose Crystals', 'starter', 15, 13, 1, 'orange_sphere.jpg'),
+(2, 'Liquid Parmesan Gnocchi and Mushroom Infusion', 'main', 30, 27, 1, 'parmesan_gnocchi.jpg'),
+(3, 'Strawberry Spheres with Ground Pepper', 'dessert', 14, 13, 1, 'strawberry_spheres.jpg'),
+(4, 'Apple Caviar with Banana Foam', 'dessert', 12, 10, 1, 'apple_caviar.jpg'),
+(5, 'Yuzu Cilantro Spheres', 'starter', 13, 12, 1, 'yuzu_sphere.jpg'),
+(6, 'Honey Caviar, Fourme Ambert, Black Tea', 'starter', 15, 14, 1, 'honey_caviar.jpg'),
+(7, 'Carbonated Mojito Spheres', 'drink', 12, 10, 1, 'carbonated_mojito.jpg'),
+(8, 'Spherical Yogurt', 'dessert', 12, 10, 1, 'spherical_yogurt.jpg'),
+(9, 'Potato Foam Gnocchi with Roasted Potato Skin Consomme', 'main', 28, 25, 1, 'potato_foam.jpg'),
+(10, 'Reverse Spherical Mozzarella', 'starter', 14, 12, 1, 'spherical_mozzarella.jpg'),
+(11, 'Liquid Pea Ravioli', 'main', 26, 24, 1, 'liquid_pea.jpg'),
+(12, 'VOSS Water', 'drink', 10, 9, 1, 'voss.jpg');
 
 -- --------------------------------------------------------
 
