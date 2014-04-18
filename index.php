@@ -1,15 +1,36 @@
-<?php 
-header("Content-text:html/text charset=utf-8");
 
+ 
+<?php 
 session_start();
 
-$db = mysqli_connect("localhost","root","troiswa","resto");
-$page="";
+$mysqli = mysqli_connect("localhost","root","troiswa","resto");
+
+$folder = "app/page/";
+$filesPage = scandir($folder);
+$pageGet = strtoLower(htmlentities($_GET["page"]));
+
 if(isset($_GET["page"]))
 {
+    if(in_array($pageGet.".php",$filesPage))
+    {
+    	$page = "app/page/".$pageGet.".php";
+    }
+    else
+    {
+    	header("Location:index.php?page=home");
+    }
+    require("app/skel.php");
 
-$page = "app/".$_GET["page"].".php";
-require($page);
 }
-require("app/skel.php");
+else
+{
+
+	header("Location:index.php?page=home");
+}
+
+
+
 ?>
+
+
+
