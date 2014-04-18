@@ -15,7 +15,7 @@ while ($resPostV = mysqli_fetch_assoc($resQueryPostV))
 	$queryPostUser = 'SELECT login FROM users WHERE id = "'.$postIdU.'"';
 	$resQueryPostUser = mysqli_query($mysqli,$queryPostUser);
 	$resPostUser = mysqli_fetch_assoc($resQueryPostUser);
-
+/*| htmlentities ? :) |*/
 	$postUser = $resPostUser["login"];
 
 	require("views/home.html");
