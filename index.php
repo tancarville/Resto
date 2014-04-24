@@ -2,8 +2,9 @@
  
 <?php 
 session_start();
-
+/*| Il manque le header utf8 :) |*/
 $mysqli = mysqli_connect("localhost","root","troiswa","resto");
+/*| Il faut vérifier si la connection mysql a reussi ! |*/
 
 $folder = "app/page/";
 $filesPage = scandir($folder);
