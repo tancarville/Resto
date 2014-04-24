@@ -68,8 +68,8 @@ VALUES("'.$login.'","'.$name.'","'.$firstname.'","'.$crypted.'","'.$address_numb
        $newpost_id= mysqli_insert_id($mysqli);
        if($newpost_id)
        {
-          echo ="ok";
-          //header("Location:index.php?page=login&registered=true");
+          
+          header("Location:index.php?page=login&registered=true");
        }
        else
        {
