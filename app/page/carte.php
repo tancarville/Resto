@@ -34,36 +34,11 @@ if($mysqli)
 		{
 			$drink[] = $ligne;
 		}
+
 	}
 
-	$i=0;
-	while(isset($starter[$i]))
-	{
-		require('views/carte_module/carte_starter.html');
-		$i++;
-	}
+require('views/carte.html');
 
-	$i=0;
-	while(isset($main[$i]))
-	{
-		require('views/carte_module/carte_main.html');
-		$i++;
-	}
-
-	$i=0;
-	while(isset($dessert[$i]))
-	{
-		require('views/carte_module/carte_dessert.html');
-		$i++;
-	}
-
-	$i=0;
-	while(isset($drink[$i]))
-	{
-		require('views/carte_module/carte_drink.html');
-		$i++;
-	}
-	
 }
 
 ?>
