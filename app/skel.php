@@ -1,7 +1,8 @@
 
 <?php 
+require("./views/skel.html"); 
 
-require("./views/skel.html"); ?>
+?>
 
 
 

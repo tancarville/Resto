@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `visitorsbook` (
   `content` varchar(1024) COLLATE utf8_unicode_ci NOT NULL,
   `date` datetime NOT NULL,
   `id_user` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`id`),   
   KEY `id_user` (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
