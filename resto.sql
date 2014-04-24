@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Ven 18 Avril 2014 à 12:16
+-- Généré le: Jeu 24 Avril 2014 à 10:46
 -- Version du serveur: 5.5.35-0ubuntu0.13.10.2
 -- Version de PHP: 5.5.3-1ubuntu2.3
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `booking` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `day` date NOT NULL,
-  `time` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+  `time` varchar(6) COLLATE utf8_unicode_ci NOT NULL,
   `number` int(2) NOT NULL,
   `id_user` int(11) NOT NULL,
   `date` datetime NOT NULL,
@@ -124,7 +124,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `admin` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `login` (`login`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=19 ;
+
+--
+-- Contenu de la table `users`
+--
+
+INSERT INTO `users` (`id`, `login`, `name`, `firstname`, `password`, `address_number`, `address_street`, `address_zipcode`, `address_city`, `email`, `phone`, `birthdate`, `admin`) VALUES
+(18, 'toto', '', '', '', 0, '', 0, '', '', 0, '0000-00-00', 0);
 
 -- --------------------------------------------------------
 
@@ -137,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `visitorsbook` (
   `content` varchar(1024) COLLATE utf8_unicode_ci NOT NULL,
   `date` datetime NOT NULL,
   `id_user` int(11) NOT NULL,
-  PRIMARY KEY (`id`),   
+  PRIMARY KEY (`id`),
   KEY `id_user` (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
@@ -161,8 +168,8 @@ ALTER TABLE `delivery`
 -- Contraintes pour la table `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`delivery_id`) REFERENCES `delivery` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`article_id`) REFERENCES `carte` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`article_id`) REFERENCES `carte` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`delivery_id`) REFERENCES `delivery` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `visitorsbook`
