@@ -52,16 +52,17 @@
             if($fetch["password"]==$_POST["password"])
             {
                   $message= "login : ".$fetch["login"]."<br/>mot de passe : ".$password;
-                  $_SESSION["id"]=$fetch["id"];
-                 $_SESSION["login"]=$fetch["login"];
-
+                 
+                 
 
 
             }
             else
             {
+            
                $message= "login : ".$fetch["login"]."<br/>mot de passe : inconnu";
-            }
+             }
+            
         }
 
        /*

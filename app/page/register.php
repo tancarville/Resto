@@ -41,9 +41,9 @@ $birthdate = $_POST['birthdate'];
        
        $firstname = mysqli_real_escape_string($mysqli,$firstname);
        
-       $password = mysqli_real_escape_string($mysqli,sha1($password));
+       $password = mysqli_real_escape_string($mysqli,($password));
 
-       $crypted = password_hash($password, PASSWORD_BCRYPT, ["cost"=>13]);
+       //$crypted = password_hash($password, PASSWORD_BCRYPT, ["cost"=>13]);
        
        $address_number = mysqli_real_escape_string($mysqli,$address_number);
        
@@ -62,7 +62,7 @@ $birthdate = $_POST['birthdate'];
        
 
        $query= 'INSERT INTO users(login,name,firstname,password,address_number,address_street,address_zipcode,address_city,email,phone,birthdate)
-VALUES("'.$login.'","'.$name.'","'.$firstname.'","'.$crypted.'","'.$address_number.'","'.$address_street.'","'.$address_zipcode.'","'.$address_city.'","'.$email.'","'.$phone.'","'.$birthdate.'")';
+VALUES("'.$login.'","'.$name.'","'.$firstname.'","'.$password.'","'.$address_number.'","'.$address_street.'","'.$address_zipcode.'","'.$address_city.'","'.$email.'","'.$phone.'","'.$birthdate.'")';
        mysqli_query($mysqli,$query);
 
        $newpost_id= mysqli_insert_id($mysqli);
