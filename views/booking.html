@@ -1,3 +1,31 @@
+<div><?=$booking_message?></div>
+<div id="booking_login" style="display:none"> LOG IN MODULE</div>
+<div id="booking_register" style="display:none"> REGISTER MODULE</div>
 <form method="POST" action="./index.php?page=booking">
-	
+	<section>
+		<input type="date" name="day"   value='<?=$today_year?>-<?=$today_month?>-<?=$today_day?>' onkeypress="return false">
+	</section>
+	<section>
+		<select name="time">
+			<option value="8PM">8PM</option>
+			<option value="9:30PM">9:30PM</option>
+		</select>
+	</section>
+	<section>
+		<select name="number">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select>
+	</section>
+	<section>
+		<input type="submit" name="book" value="Book"/>
+	</section>
 </form>
