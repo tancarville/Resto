@@ -51,10 +51,14 @@
            
             if(password_verify($password,$fetch["password"]))
             {
-                  header("Location:index.php?page=logged");
                  
                  
+                 $_SESSION["user_id"]=$fetch["id"];
+                 $_SESSION["login"]=$fetch["login"];
+                 $_SESSION["admin"]=$fetch["admin"];
 
+                 
+                  header("Location:index.php?page=logged");
 
             }
             else
@@ -65,35 +69,7 @@
             
         }
 
-       /*
-          if($fetch)
-          {
-              if($fetch['password'] == sha1($_POST['password']));
-              {
-                $_SESSION['login'] = $_POST['login'];
-              }
-              else{
-                $erreur = "Password incorrecte";
-              }
-          }
-          else{
-              $erreur = "Login incorrecte";
-          }
-        */
-
-        /*
-       if($fetch["login"])
-       {
-
-          echo $fetch["login"];
-           if($fetch["password"]==true)
-           {
-               
-          echo $fetch["password"];
-
-           }
-       }
-      */
+       
    }
 
   require("./views/login.html");
