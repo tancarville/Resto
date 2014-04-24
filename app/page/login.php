@@ -37,7 +37,7 @@
    if(isset($_POST["login"],$_POST["password"]))
    {
        $login = mysqli_real_escape_string($mysqli,$_POST["login"]);
-       $password = mysqli_real_escape_string($mysqli,sha1($_POST["password"]));
+       $password = mysqli_real_escape_string($mysqli,$_POST["password"]);
 
        $query = 'SELECT * FROM users WHERE login = "'.$login.'"';
 
@@ -49,9 +49,9 @@
         {
 
            
-            if($fetch["password"]==$_POST["password"])
+            if(password_verify($password,$fetch["password"]))
             {
-                  $message= "login : ".$fetch["login"]."<br/>mot de passe : ".$password;
+                  header("Location:index.php?page=logged");
                  
                  
 
