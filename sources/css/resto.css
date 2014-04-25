@@ -17,6 +17,11 @@ h1{
 h2{
 		font-size: 2.5rem;
 }
+h3{
+		font-size: 1.5rem;
+		text-align: left;
+		margin-bottom: 0.7rem;
+}
 span{
 	margin-left: 65%;
 }
@@ -88,10 +93,14 @@ span{
 		width: 90%;
 		margin: auto;
 		height: 30rem;
-
 		margin-bottom: 5rem;
 }
 .home{
+		width: 100%;
+		margin: auto;
+
+}
+.carte{
 		width: 100%;
 		margin: auto;
 
@@ -117,36 +126,37 @@ span{
 	padding-bottom: 0.5rem;
 }
 .mini-section{
-		width: 30%;
+		width: 25%;
 		height: 10rem;
 		float: left;
 		margin-right: 3%;
 		margin-top: 1.5rem;
-		border-right: solid 0.1rem grey;
 		margin-bottom: 2rem;
+		line-height: 1.1rem;
+		text-align: left;
 }
 .mini-section:last-child{
-		width: 30%;
+		width: 25%;
 		height: 10rem;
 		float: left;
 		margin-left:0;
 		border-right: none;
 }
 .petite-section{
-		width: 45%;
+		width: 40%;
 		height: 10rem;
 		float: left;
-		margin-right: 3%;
-		margin-top: 1rem;
-		border-right: solid 0.1rem grey;
+		margin-left: 5%;
+		margin-top: 0.5rem;
 		margin-bottom: 2rem;
 		text-align: center;
+		padding-right: 4%;
 }
-.petite-section{
-		width: 45%;
+.petite-section:last-child{
+		width: 40%;
 		height: 10rem;
+		margin-left: 3%;
 		float: left;
-		margin-left: 0;
 		margin-top: 0.5rem;
 		border-right: none;
 }
@@ -159,7 +169,7 @@ span{
 		height: 14.3rem;
 }
 .text-footer{
-		text-align: left;
+		text-align: justify;
 		color: grey;
 }
 .text-foot{
@@ -172,7 +182,7 @@ span{
 		height: 30rem;
 		float: left;
 		background: pink;
-		margin-top: 0.5rem;
+		margin-top: 1rem;
 
 }
 #footer{
