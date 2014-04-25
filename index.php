@@ -1,10 +1,13 @@
+<?php
 
- 
-<?php 
+header('Content-Type; text/html; charset = utf-8');
+
 session_start();
-/*| Il manque le header utf8 :) |*/
+
 $mysqli = mysqli_connect("localhost","root","troiswa","resto");
-/*| Il faut vérifier si la connection mysql a reussi ! |*/
+
+if(mysqli_connect_errno() !== 0)
+    die(mysqli_connect_error());
 
 $folder = "app/page/";
 $filesPage = scandir($folder);
@@ -21,15 +24,11 @@ if(isset($_GET["page"]))
     	header("Location:index.php?page=home");
     }
     require("app/skel.php");
-
 }
 else
 {
-
 	header("Location:index.php?page=home");
 }
-
-
 
 ?>
 
