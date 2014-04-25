@@ -1,0 +1,62 @@
+<div><?=$message_delivery?></div>
+<form method="POST" action="./index.php?page=delivery">
+<table id="delivery_table">
+<tr>
+	<td>Name</td><td>Price</td><td>Qty</td><td>Total</td>
+</tr>
+<tr>
+	<td colspan='4'>Starters</td>
+</tr>
+<?php require('./app/page/delivery_module/delivery_starters.php');?>
+<tr>
+	<td colspan='4'>Mains</td>
+</tr>
+<?php require('./app/page/delivery_module/delivery_mains.php');?>
+<tr>
+	<td colspan='4'>Desserts</td>
+</tr>
+<?php require('./app/page/delivery_module/delivery_desserts.php');?>
+<tr>
+	<td colspan='4'>Drinks</td>
+</tr>
+<?php require('./app/page/delivery_module/delivery_drinks.php');?>
+<tr>
+	<td colspan='3'></td>
+	<td id='total_whole_php'>Total</td>
+</tr>
+<tr>
+	<td colspan='3'></td>
+	<td>
+		<input type="submit" name="deliver" value="Order"/>
+	</td>
+</tr>
+</table>
+</form>
+<script type="text/javascript" src="./sources/js/jquery.js"></script>
+<script>
+var tt = 0;
+$("select").on('change', function()
+{
+	var quantity = $(this);
+	var value = quantity.val();
+	var id = quantity.attr('id');
+	var span_price = "#price_"+id;
+	var td_total = "#total_"+id;
+
+	var price = $(span_price).html();
+	var subtotal = price*value;
+	if (subtotal == 0)
+		subtotal = "";
+	$(td_total).html(subtotal);
+
+	var whole_total = 0;
+	$('.php_subtotal').each(function()
+	{
+		if (!isNaN(parseInt($(this).html())))
+		{
+			whole_total = whole_total + parseInt($(this).html());
+		}
+	});
+	$('#total_whole_php').html(whole_total);
+});
+</script>
