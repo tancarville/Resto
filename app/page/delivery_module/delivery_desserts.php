@@ -8,8 +8,8 @@ while($starter = mysqli_fetch_assoc($res_starters))
 {
 	$id = $starter['id'];
 	/*on crée des variables pour donner des noms aux elements HTML*/
-	$span_price = 'price_'.$id;
-	$td_total = 'total_'.$id;
+	$php_price = 'price_'.$id;
+	$php_total = 'total_'.$id;
 
 	$name = $starter['name'];
 	$price = $starter['price_delivery'];
